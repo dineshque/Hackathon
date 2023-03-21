@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Enter the fields</h2>
+
+<form action="/" method="post">
+  <label for="n">Enter the Amount of Nitrogen : </label>
+  <input type="number" id="n" name="N" min="0" ><br><br>
+
+  <label for="p">Enter the Amount of Phosphorus : </label>
+  <input type="number" id="p" name="P" min="0"><br><br>
+
+  <label for="k">Enter the Amount of Potassium : </label>
+  <input type="number" id="k" name="K" min="0"><br><br>
+
+  <label for="t">Enter the Value of Temperature(in C) : </label>
+  <input type="number" id="t" name="temprature" min="0" ><br><br>
+
+  <label for="h">Enter the Value of humidity : </label>
+  <input type="number" id="h" name="humidity" min="0"><br><br>
+
+  <label for="ph">Enter the Value of ph-value : </label>
+  <input type="number" id="ph" name="ph" min="0"><br><br>
+
+  <label for="r">Enter the Value of rainfall : </label>
+  <input type="number" id="r" name="rainfall" min="0"><br><br>
+
+
+  <button type="submit" >Predict</button>
+</form>
+
+{% if result%}
+<h2>The Best Crop To Grow In This Condition Is {{result[0]}}</h2>
+{% endif %}
+
+</body>
+</html>
